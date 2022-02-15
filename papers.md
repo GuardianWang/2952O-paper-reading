@@ -33,6 +33,24 @@ cons:
 1. Doesn't report performance when people are close to background wall (small diff between fore-/back-ground). 
 2. The body parsing (segmentation) overhead makes the process slow.
 3. Fig 7 shows there's still a huge gap between predicted human parts and g.t.
+4. 3D feature is interpretable, can be visualized and satisfies geometric properties (can apply rotation matrix to)
+
+- **Unsupervised Geometry-Aware Representation for 3D Human Pose Estimation**.
+Rhodin, Helge, Mathieu Salzmann, and Pascal Fua.
+**ECCV2018**.
+([pdf](http://openaccess.thecvf.com/content_ECCV_2018/papers/Helge_Rhodin_Unsupervised_Geometry-Aware_Representation_ECCV_2018_paper.pdf))
+(Citations:194)
+
+pros:
+1. decouple the learning of appearance, geometry, background
+2. may be applied to general rigid objects
+3. with the same idea of exchanging features, can decouple more, e.g., body shape, expression, hair color, etc, as long as paired images are provided.
+
+cons:
+1. comparison is not fair, has been unsupervisedly trained on many images (didn't report)
+2. appearance is not well captured
+3. 3D pose estimation is still semi-supervised learning instead of unsupervised learning
+4. geometry reconstruction is limited by training data: pitch is not well learned
 
 # Robotics
 - **Learning agile robotic locomotion skills by imitating animals**.

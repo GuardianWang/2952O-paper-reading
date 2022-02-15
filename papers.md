@@ -48,9 +48,11 @@ pros:
 
 cons:
 1. comparison is not fair, has been unsupervisedly trained on many images (didn't report)
-2. appearance is not well captured
-3. 3D pose estimation is still semi-supervised learning instead of unsupervised learning
-4. geometry reconstruction is limited by training data: pitch is not well learned
+2. Hard to generalize to image dataset. For single image dataset, finding paired images is difficult.
+3. Suitable to fixed camera position, so we can get the background.
+4. appearance is not well captured
+5. 3D pose estimation is still semi-supervised learning instead of unsupervised learning
+6. geometry reconstruction is limited by training data: pitch is not well learned
 
 # Robotics
 - **Learning agile robotic locomotion skills by imitating animals**.

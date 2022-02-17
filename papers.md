@@ -93,6 +93,44 @@ cons:
 8. In reward function, $\exp(-x)$, when $x$ is large, derivative is small. Maybe leads to slow convergence?
 9. From Robust to Adaptive (Before), there is not significant improvement? Does mean finetuning based on environment is more important than training with random environment? Is the encoder necessary? 
 
+- **Nothing but geometric constraints: A model-free method for articulated object pose estimation**.
+Liu, Qihao, Weichao Qiu, Weiyao Wang, Gregory D. Hager, and Alan L. Yuille.
+**arXiv2020**.
+([pdf](https://arxiv.org/pdf/2012.00088.pdf))
+(Citations:7)
+
+techniques
+
+1. epipolar geometry:
+[course](https://www.youtube.com/watch?v=6kpBqfgSPRc&list=PLELvrS4qfPZ7h_pgw-_X7D1ijScmsk965&index=2)
+2. RANSAC
+[paper](https://dl.acm.org/doi/pdf/10.1145/358669.358692?casa_token=oNOGfxwunJIAAAAA:qYYOVTu9vOFmDqwdCO73Isrh6pf0aeGFD1czZLIkeo91xF7ikQQKx_zsqmRqmxW_ELJYeNnVh9kJ)
+[video](https://www.youtube.com/watch?v=9D5rrtCC_E0)
+[video2](https://www.youtube.com/watch?v=Cu1f6vpEilg)
+3. rotation is orthogonal
+[video](https://www.youtube.com/watch?v=arSFML-2_Os)
+
+pros:
+
+1. design epipolar constraint as a loss, and background pixels (where the constraint can be applied) dominate the image
+2. use geometric (image coordinate) and pixel value constraints.
+3. many optimization: optimization optic flow with epipolar constraint; optimize rotation matrix with depth estimation.
+4. Table1: generalizable to other objects
+5. To transfer to differnet objects, only need to retrain RANSAC and EM for part segmentation.
+6. Table3: robust to depth estimation
+
+cons: 
+
+1. epipolar constraint assumes moderate change between frames -- sample rate should be large enough to train the model -- large sample rates may lead to overfitting
+2. epipolar loss fails when camera is fixed
+3. errors accumulate as video length increases
+4. photometric difference loss is not robust to lignting condition (shadow)
+5. in 3.3, authors say the camera is still
+6. R is calculated from optic flow, to minimize the epipolar loss. Then use R to update optic flow. (may work because if optic flow not good, R not good, loss large; if optic flow good, loss small)
+7. not clear whether to estimate joint angle or change of joint angle
+8. didn't talk about what if depth estimation is not good
+
+
 # Template
 - ** **.
 .

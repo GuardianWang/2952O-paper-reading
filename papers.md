@@ -73,7 +73,8 @@ pros
 3. position encoding to capture higher frequency in images, prevent over smoothing
 4. model is small (5MB)
 5. doesn't require 3D model as label
-6. well capture specularities
+6. well capture specularities, view dependent
+7. can edit by adding objects (volumn rendering, ray tracing)
 
 cons
 

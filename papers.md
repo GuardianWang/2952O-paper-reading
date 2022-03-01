@@ -54,6 +54,34 @@ cons:
 5. 3D pose estimation is still semi-supervised learning instead of unsupervised learning
 6. geometry reconstruction is limited by training data: pitch is not well learned
 
+
+- **Nerf: Representing scenes as neural radiance fields for view synthesis**.
+Mildenhall, Ben, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, and Ren Ng.
+**ECCV2020**.
+([pdf](http://openaccess.thecvf.com/content/CVPR2021/papers/Pumarola_D-NeRF_Neural_Radiance_Fields_for_Dynamic_Scenes_CVPR_2021_paper.pdf))
+(Citations:761)
+
+techniques:
+
+1. volume density
+2. volume rendering
+
+pros 
+
+1. simple and powerful MLP
+2. sampling technique is efficient
+3. position encoding to capture higher frequency in images, prevent over smoothing
+4. model is small (5MB)
+5. doesn't require 3D model as label
+6. well capture specularities
+
+cons
+
+1. represent multiple scenes with 1 network
+2. requires a large amount of images to prevent possible occlusion (can solve with GAN?)
+3. convergence speed is slow (at least 100k iterations and 1 day on V100)
+4. cannot finetune scene objects, just a naive representation.
+
 # Robotics
 - **Learning agile robotic locomotion skills by imitating animals**.
 Peng, Xue Bin, Erwin Coumans, Tingnan Zhang, Tsang-Wei Lee, Jie Tan, and Sergey Levine.
@@ -98,6 +126,14 @@ Liu, Qihao, Weichao Qiu, Weiyao Wang, Gregory D. Hager, and Alan L. Yuille.
 **arXiv2020**.
 ([pdf](https://arxiv.org/pdf/2012.00088.pdf))
 (Citations:7)
+
+pipeline:
+
+1. optic flow
+2. estimate R
+3. refine optic flow
+4. refine transformation
+5. estimate final transformation
 
 techniques
 

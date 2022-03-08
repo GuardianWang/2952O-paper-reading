@@ -83,6 +83,29 @@ cons
 3. convergence speed is slow (at least 100k iterations and 1 day on V100)
 4. cannot finetune scene objects, just a naive representation.
 
+- **Scene representation networks: Continuous 3d-structure-aware neural scene representations**.
+Sitzmann, Vincent, Michael Zollhöfer, and Gordon Wetzstein.
+**NeurIPS2019**.
+([pdf](https://proceedings.neurips.cc/paper/2019/file/b5dc4e5d9b495d0196f61d45b26ef33e-Paper.pdf)
+[project](https://www.vincentsitzmann.com/srns/)
+[tutorial](https://www.youtube.com/watch?v=Or9J-DCDGko))
+(Citations: 415)
+
+pros:
+
+1. LSTM differentiable ray marching
+2. hypernetwork encodes the structure for the same kind of objects, and few-shot leaning for new scenes
+3. hypernetwork, encode multiple scenes with the same network
+4. scene features may benefit downstream tasks, e.g., 3D segmentation/localization/object detection
+   
+cons:
+
+1. didn't use positional encoding and hard to capture high frequency signals
+2. hard to guarantee for different camera pose and the same ray direction, the intersection position will be the same
+3. didn't provide a way of disentangling latent feature
+4. L2 loss may make the visual effect over-smooth
+5. stuck with small holes (chair) which are hard to perform ray matching
+
 # Robotics
 - **Learning agile robotic locomotion skills by imitating animals**.
 Peng, Xue Bin, Erwin Coumans, Tingnan Zhang, Tsang-Wei Lee, Jie Tan, and Sergey Levine.
@@ -167,6 +190,25 @@ cons:
 7. not clear whether to estimate joint angle or change of joint angle
 8. didn't talk about what if depth estimation is not good
 
+- **imap: Implicit mapping and positioning in real-time.**.
+Sucar, Edgar, Shikun Liu, Joseph Ortiz, and Andrew J. Davison.
+**ICCV2021**.
+([pdf](http://openaccess.thecvf.com/content/ICCV2021/papers/Sucar_iMAP_Implicit_Mapping_and_Positioning_in_Real-Time_ICCV_2021_paper.pdf))
+(Citations:21)
+
+pros:
+
+1. real-time, online
+2. efficient pixel sampling and key-frame sampling
+3. fill in the holes
+4. model size is small
+5. differentialble depth estimation
+
+cons:
+
+1. texture doesn't look sharp, over-smooth
+2. hole completion of complicated scenes is not that good, the interpolation is over-smooth (room-1, Fig7)
+3. experiments didn't say robustness against depth estimation
 
 # Template
 - ** **.

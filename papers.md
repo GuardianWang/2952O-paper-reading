@@ -106,6 +106,24 @@ cons:
 4. L2 loss may make the visual effect over-smooth
 5. stuck with small holes (chair) which are hard to perform ray matching
 
+- **Barf: Bundle-adjusting neural radiance fields**.
+Lin, Chen-Hsuan, Wei-Chiu Ma, Antonio Torralba, and Simon Lucey.
+**ICCV2021**.
+([pdf](http://openaccess.thecvf.com/content/ICCV2021/papers/Lin_BARF_Bundle-Adjusting_Neural_Radiance_Fields_ICCV_2021_paper.pdf))
+(Citations: 27)
+
+pros:
+
+1. doesn't require accurate camera parameters
+2. the mask idea supports coarse to fine training, and we don't need to change the structure of model
+3. good transition from 2D example to 3D case
+
+cons:
+
+1. doesn't speed up training
+2. maybe can customize the gradient update function (multiplying true gradient with regularization terms), bc when alpha is large, the gradient is still large
+3. with camera poses, can it improve?
+
 # Robotics
 - **Learning agile robotic locomotion skills by imitating animals**.
 Peng, Xue Bin, Erwin Coumans, Tingnan Zhang, Tsang-Wei Lee, Jie Tan, and Sergey Levine.
@@ -209,6 +227,57 @@ cons:
 1. texture doesn't look sharp, over-smooth
 2. hole completion of complicated scenes is not that good, the interpolation is over-smooth (room-1, Fig7)
 3. experiments didn't say robustness against depth estimation
+
+- **3d neural scene representations for visuomotor control**.
+Li, Yunzhu, Shuang Li, Vincent Sitzmann, Pulkit Agrawal, and Antonio Torralba.
+**CoRL2021**.
+([pdf](https://proceedings.mlr.press/v164/li22a/li22a.pdf)
+[project](https://3d-representation-learning.github.io/nerf-dy/))
+
+generalization:
+
+1. image
+2. action
+3. scene
+
+(Citations: 5)
+
+pros:
+
+1. triplet loss enforces state representation to be robust against camera position
+2. 2-step makes training more stable
+3. self supervision in auto-decoding for state representation optimization
+4. learns long-term actions: pour the water and tilt the bottle back
+
+
+cons:
+
+1. lack of high frequency info for futural frames: L2 loss, averaging image features
+2. What's the difference between training and goal image?
+3. 1 network per action
+4. memory of state in long sequence?
+5. do we need 2-step?
+
+
+- **Parallel tracking and mapping for small AR workspaces**.
+Klein, Georg, and David Murray.
+**ISMAR2007**.
+([pdf](https://ieeexplore.ieee.org/iel5/4509974/4538818/04538852.pdf))
+(Citations: 4963)
+
+pros
+
+1. recover from failure
+2. no NN and promising result, stable robust
+3. robust against occlusion
+4. parallel design
+5. image pyramid: robust against size 
+
+cons:
+
+1. corner detector, may fail due to motion blur
+2. not robust against repeated texture
+3. not applicable when scene is not static
 
 # Template
 - ** **.

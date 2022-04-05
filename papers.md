@@ -124,29 +124,53 @@ cons:
 2. maybe can customize the gradient update function (multiplying true gradient with regularization terms), bc when alpha is large, the gradient is still large
 3. with camera poses, can it improve?
 
-# Robotics
-- **Learning agile robotic locomotion skills by imitating animals**.
-Peng, Xue Bin, Erwin Coumans, Tingnan Zhang, Tsang-Wei Lee, Jie Tan, and Sergey Levine.
-**RSS2020 best paper**.
+# Template
+- **nerfies: deformable neural radiance fields.**.
+park, keunhong, utkarsh sinha, jonathan t. barron, sofien bouaziz, dan b. goldman, steven m. seitz, and ricardo martin-brualla.
+**ICCV2021**.
+([pdf](https://arxiv.org/pdf/2011.12948)
+[project](https://nerfies.github.io/))
+(Citations: 159)
+
+pros:
+
+1. use deformation field to find a canonical view, which aligns the same object with minor movement
+2. background regularization forces the background to be static
+3. the robust error function reduces the influence of outliers because gradient of large values is small
+4. training data is easily accessible
+
+cons:
+
+1. training time is long: a week on 8 V100
+2. The background regularization cannot model dynamic background
+3. cannot handle topological transformation
+4. quality depends on SfM
+5. visualization of latent code
+6. fast motion
+
+# robotics
+- **learning agile robotic locomotion skills by imitating animals**.
+peng, xue bin, erwin coumans, tingnan zhang, tsang-wei lee, jie tan, and sergey levine.
+**rss2020 best paper**.
 ([pdf](https://arxiv.org/pdf/2004.00784.pdf)
-[project](https://xbpeng.github.io/projects/Robotic_Imitation/index.html)
+[project](https://xbpeng.github.io/projects/robotic_imitation/index.html)
 [code](https://github.com/google-research/motion_imitation)
-[video](https://www.youtube.com/watch?v=lKYh6uuCwRY))
-(Citations: 122)
+[video](https://www.youtube.com/watch?v=lkyh6uucwry))
+(citations: 122)
 
 techniques:
 
 1. inverse-kinematics: 
-   [live coding](https://www.youtube.com/watch?v=hbgDqyy8bIw)
-   [talk](https://graphics.cs.wisc.edu/GleicherAssets/Talks/1998_07_retarget-both.pdf)
-   [video](https://www.youtube.com/watch?v=Vn-vVzMGgec)
+   [live coding](https://www.youtube.com/watch?v=hbgdqyy8biw)
+   [talk](https://graphics.cs.wisc.edu/gleicherassets/talks/1998_07_retarget-both.pdf)
+   [video](https://www.youtube.com/watch?v=vn-vvzmggec)
    [paper](https://sci-hub.ru/https://dl.acm.org/doi/pdf/10.1145/280814.280820)
 2.  generalized coordinates
 3.  root position
 
 pros:
 
-1.  with the author's prior [work](https://xbpeng.github.io/projects/SFV/index.html) 
+1.  with the author's prior [work](https://xbpeng.github.io/projects/sfv/index.html) 
    "Reinforcement Learning of Physical Skills from Videos", we can leverage videos in-the-wild.
 2. Inverse kinemetics is applicable to collecting human motion data to train human-like 2-foot robots.
 3. Honestly state the shortcomings, e.g., not able to learn more dynamic behaviors.
@@ -273,7 +297,31 @@ pros
 4. parallel design
 5. image pyramid: robust against size 
 
+shaky camera
+real time 
+SDE tricks
+parallel 
+games
+single camera
+
+painting
+
 cons:
+
+cannot control by multiple people
+repeated texture
+only main plain, 
+space is limited 
+now we have depth
+calibration
+no interaction
+
+
+geometry/object detection, property of the object, semantic
+bridge lightweight, fast, robust
+interaction
+
+
 
 1. corner detector, may fail due to motion blur
 2. not robust against repeated texture

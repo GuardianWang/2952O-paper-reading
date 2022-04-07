@@ -328,6 +328,30 @@ interaction
 3. not applicable when scene is not static
 
 # Template
+- **Learning Continuous Environment Fields via Implicit Functions**.
+Li, Xueting, Shalini De Mello, Xiaolong Wang, Ming-Hsuan Yang, Jan Kautz, and Sifei Liu.
+**ICLR2022Poster**.
+([pdf](https://arxiv.org/pdf/2111.13997))
+(Citations:0)
+
+pros
+1. model scene by reaching distance. can use gradient to update the position
+2. to make the next decision, only need to explore a small neighbor of the current location
+
+
+cons
+1. not symmetric as for current location and goal. (f(x, y) = f(y, x))
+2. in 2d case, feature is not robust against color (we only want structure). But not a problem for 3D point cloud
+3. need more interaction between walkable area and reaching distance field.  
+   | target       grad(x->y) > grad(x->z)
+ x | y
+ z |
+   wall
+
+---------
+4. Assume bird view. What if we only have image from the camera on the robot?
+
+# Template
 - ** **.
 .
 ** **.

@@ -124,7 +124,6 @@ cons:
 2. maybe can customize the gradient update function (multiplying true gradient with regularization terms), bc when alpha is large, the gradient is still large
 3. with camera poses, can it improve?
 
-# Template
 - **nerfies: deformable neural radiance fields.**.
 park, keunhong, utkarsh sinha, jonathan t. barron, sofien bouaziz, dan b. goldman, steven m. seitz, and ricardo martin-brualla.
 **ICCV2021**.
@@ -347,7 +346,6 @@ interaction
 2. not robust against repeated texture
 3. not applicable when scene is not static
 
-# Template
 - **Learning Continuous Environment Fields via Implicit Functions**.
 Li, Xueting, Shalini De Mello, Xiaolong Wang, Ming-Hsuan Yang, Jan Kautz, and Sifei Liu.
 **ICLR2022Poster**.

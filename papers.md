@@ -148,6 +148,26 @@ cons:
 5. visualization of latent code
 6. fast motion
 
+- **Deepsdf: Learning continuous signed distance functions for shape representation.**.
+Park, Jeong Joon, Peter Florence, Julian Straub, Richard Newcombe, and Steven Lovegrove.
+**CVPR2019**.
+([pdf](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf))
+(Citations:984)
+
+pros:
+
+1. continuous signed distance field is a good representation (easy to calc normal)
+2. autodecoder prevents bottleneck of encoder
+3. because it defines closed surfaces, can apply ray-tracing to render the shape
+
+cons:
+
+1. reference time is long 9s, 1e3 slower than AtlasNet (voxel hashing?)
+2. hard to get real-world perfect data (train with synthetics dataset ShapeNet)
+3. hard to edit the shape
+4. mostly show symmetric and smooth shape, didn't show complex shapes e.g. tree with leaves, gloves, clothes
+
+
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.
 peng, xue bin, erwin coumans, tingnan zhang, tsang-wei lee, jie tan, and sergey levine.

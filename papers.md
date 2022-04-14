@@ -369,6 +369,28 @@ cons
 ---------
 4. Assume bird view. What if we only have image from the camera on the robot?
 
+
+- **Objectfolder: A dataset of objects with implicit visual, auditory, and tactile representations.**.
+Gao, Ruohan, Yen-Yu Chang, Shivani Mall, Li Fei-Fei, and Jiajun Wu.
+**CoRL2021**.
+([pdf](https://arxiv.org/pdf/2109.07991)
+[project](https://ai.stanford.edu/~rhgao/objectfolder/))
+(Citations:4)
+
+pros
+
+1. Multisensory dataset, train a model to preceive the world through vision, audio, and touch.
+2. represent objects by NN, dense query
+3. audio for object recognition is interesting
+4. similarity between features of different modalities is interesting
+
+cons
+
+1. small dataset
+2. why not mesh?
+3. didn't talk about image rendering time
+4. most are household objects like bowls, chair, desks
+
 # Template
 - ** **.
 .

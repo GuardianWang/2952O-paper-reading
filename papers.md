@@ -166,6 +166,34 @@ cons:
 3. hard to edit the shape
 4. mostly show symmetric and smooth shape, didn't show complex shapes e.g. tree with leaves, gloves, clothes
 
+- **Grasping field: Learning implicit representations for human grasps**.
+Karunratanakul, Korrawe, Jinlong Yang, Yan Zhang, Michael J. Black, Krikamol Muandet, and Siyu Tang.
+**3DV2020**.
+([pdf](https://arxiv.org/pdf/2008.04451.pdf?ref=https://githubhelp.com)
+[code](https://github.com/korrawe/grasping_field))
+(Citations:38)
+
+techniques:
+1. [chamfer distance](https://www.youtube.com/watch?v=P4IyrsWicfs)
+
+common: 
+
+1. delta in SDF
+2. feed feature to deep layers
+
+pros 
+
+1. distance field representation, enforce physical constraints, e.g. no inter-penetration
+2. 3d reconstruction from single view rgb image
+3. sdf for motiple objects
+
+cons
+
+1. In real applications, objects may not be scanned 360 degrees. May be only partially scanned
+2. hard to extend to different end effectors
+3. doesn't consider material of objects, e.g., knife
+4. why do we want to learn the static grasp
+
 
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.

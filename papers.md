@@ -419,6 +419,27 @@ cons
 3. didn't talk about image rendering time
 4. most are household objects like bowls, chair, desks
 
+. "" arXiv preprint arXiv:2104.01542 (2021).
+- **Synergies between affordance and geometry: 6-dof grasp detection via implicit representations**.
+Jiang, Zhenyu, Yifeng Zhu, Maxwell Svetlik, Kuan Fang, and Yuke Zhu.
+**arxiv2021**.
+([pdf](http://www.google.com/url?q=http%3A%2F%2Farxiv.org%2Fabs%2F2104.01542&sa=D&sntz=1&usg=AOvVaw22MAuYVtUJOze1hcMq8xGA)
+[project](https://sites.google.com/view/rpl-giga2021))
+(Citations: 15)
+
+pros:
+
+1. modeling the input and output: output is the orientation given a position query, instead of (position, orientation) pair
+2. also interesting to map from grid to 3 canonical planes
+3. interesting to inpaint the planes by UNet
+4. also interesting to query grid feature from canonical planes
+
+cons:
+
+1. how does arm move to avoid collision
+2. why don't just trilinear interpolation
+3. doesn't update as the arm moves
+
 # Template
 - ** **.
 .

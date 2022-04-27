@@ -194,6 +194,11 @@ cons
 3. doesn't consider material of objects, e.g., knife
 4. why do we want to learn the static grasp
 
+- ** **.
+.
+** **.
+([pdf]())
+(Citations: )
 
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.

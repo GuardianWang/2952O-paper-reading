@@ -194,11 +194,30 @@ cons
 3. doesn't consider material of objects, e.g., knife
 4. why do we want to learn the static grasp
 
-- ** **.
-.
-** **.
-([pdf]())
-(Citations: )
+. "" In European conference on computer vision, pp. 536-551. Springer, Cham, 2014.
+
+- **Learning 6d object pose estimation using 3d object coordinates**.
+Brachmann, Eric, Alexander Krull, Frank Michel, Stefan Gumhold, Jamie Shotton, and Carsten Rother.
+**ECCV2014**.
+([pdf](https://link.springer.com/content/pdf/10.1007/978-3-319-10605-2_35.pdf))
+(Citations:567)
+
+terms
+
+1. [Kabsch algorithm](https://en.wikipedia.org/wiki/Kabsch_algorithm) get optimal rotation mat between two sets of points
+
+pros
+
+1. learn class and location together, makes use of common image features
+2. robust, use top 3 hypothesis and ave acc is 96%
+3. use depth, robust against lighting conditions
+4. depth, coordinates, and object class are good loss functions
+5. robust against occlusion
+
+cons
+
+1. need 3D model of the object
+2. |class| * space is hard to scale
 
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.

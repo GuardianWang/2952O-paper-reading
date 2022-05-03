@@ -219,6 +219,33 @@ cons
 1. need 3D model of the object
 2. |class| * space is hard to scale
 
+# Template
+- **inerf: Inverting neural radiance fields for pose estimation**.
+Yen-Chen, Lin, Pete Florence, Jonathan T. Barron, Alberto Rodriguez, Phillip Isola, and Tsung-Yi Lin.
+**IROS2021**.
+([pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9636708&casa_token=TM8xMncdrzUAAAAA:T2JSYhRXeLBSiSG48T1YQQRlA0LCSkUFVV-Hduwna24YEQmUP9beSUxwqx4pRD_2QI5g_vw4GA&tag=1)
+[project](https://yenchenlin.me/inerf/))
+(Citations:46)
+
+terms
+
+1. [Aperture problem](https://www.youtube.com/watch?v=vVGorOxMh8w)
+2. [morphological](https://www.youtube.com/watch?v=d1we_yqUASg)
+
+pros 
+
+1. paper is easy to read, apply a simple idea to solve an important problem
+2. using dilation and interest point to find interest region is interesting
+3. possiblity to perform semi-supervised learning with few labeled data to train nerf
+4. can be applied to different objects within the same category
+
+cons
+
+1. not robust against lighting and occlusion
+2. training takes too long, not real-time
+3. a good result still relies on a good nerf, whic means labeled data
+4. is using 5 images for comparison enough?
+
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.
 peng, xue bin, erwin coumans, tingnan zhang, tsang-wei lee, jie tan, and sergey levine.
@@ -481,11 +508,3 @@ result
 settings
 <div class="boxed" style="background-color:red; width:20px">&nbsp</div>
 question
-
-
-```mermaid
-graph TB
-GAN --label--> cGAN["Conditional GAN (cGAN)"] --Encoder--> Age-cGAN
-GAN --CNN--> DCGAN
-GAN --VAE--> VAE/GAN --"combine encoder and discriminator"--> IAN["Introspective Adversarial Network"]
-```

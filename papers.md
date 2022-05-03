@@ -219,7 +219,6 @@ cons
 1. need 3D model of the object
 2. |class| * space is hard to scale
 
-# Template
 - **inerf: Inverting neural radiance fields for pose estimation**.
 Yen-Chen, Lin, Pete Florence, Jonathan T. Barron, Alberto Rodriguez, Phillip Isola, and Tsung-Yi Lin.
 **IROS2021**.

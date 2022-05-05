@@ -248,7 +248,8 @@ cons
 - **Learning transferable visual models from natural language supervision**.
 Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry et al.
 **ICML2021**.
-([pdf](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf))
+([pdf](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf)
+[blog](https://openai.com/blog/clip/))
 (Citations:922)
 
 terms:

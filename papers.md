@@ -245,7 +245,6 @@ cons
 3. a good result still relies on a good nerf, whic means labeled data
 4. is using 5 images for comparison enough?
 
-# Template
 - **Learning transferable visual models from natural language supervision**.
 Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry et al.
 **ICML2021**.

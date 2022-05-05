@@ -245,6 +245,32 @@ cons
 3. a good result still relies on a good nerf, whic means labeled data
 4. is using 5 images for comparison enough?
 
+# Template
+- **Learning transferable visual models from natural language supervision**.
+Radford, Alec, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry et al.
+**ICML2021**.
+([pdf](http://proceedings.mlr.press/v139/radford21a/radford21a.pdf))
+(Citations:922)
+
+terms:
+
+1. linear probing: use an FC layer to classify model features
+
+pros:
+
+1. easy idea, only use image features and text features
+2. easy to apply linear probing to new dataset
+3. generalize to new classes by using comparing the difference between image and text
+4. did a lot of experiments to demonstrate the power of CLIP
+
+cons:
+
+1. takes too long/lots of GPUs to train, 3 weeks on 600 GPUs
+2. didn't throughly solve the generalization problem of DL models. Solve this by using larger dataset but still fail on unseen distribution,
+e.g., MNIST
+3. doesn't work if meet a word that is not encoded
+4. other researchers can finetune the model, but it's hard to retrain from scratch
+
 # robotics
 - **learning agile robotic locomotion skills by imitating animals**.
 peng, xue bin, erwin coumans, tingnan zhang, tsang-wei lee, jie tan, and sergey levine.
